@@ -24,6 +24,7 @@
     <ProjectGuid>{5cf682f5-88d9-4fc5-bce6-b4c228fb3ab3}</ProjectGuid>
     <RootNamespace>Classwork</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Fabrica Metod</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
