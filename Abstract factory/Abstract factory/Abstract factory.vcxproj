@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5cf682f5-88d9-4fc5-bce6-b4c228fb3ab3}</ProjectGuid>
-    <RootNamespace>Classwork</RootNamespace>
+    <ProjectGuid>{ea38b41f-4f0d-4b9d-ac60-c31396f51f76}</ProjectGuid>
+    <RootNamespace>Abstractfactory</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Fabrica metod</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,13 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Creator.cpp" />
+    <ClCompile Include="Car.cpp" />
+    <ClCompile Include="Factory.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Product.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Creator.h" />
-    <ClInclude Include="Product.h" />
+    <ClInclude Include="Car.h" />
+    <ClInclude Include="Factory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
