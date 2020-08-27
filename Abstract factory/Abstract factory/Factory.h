@@ -5,7 +5,6 @@
 enum Car_model { tesla, bmw };
 
 
-// Interface
 class Factory_car;
 class Factory
 {
