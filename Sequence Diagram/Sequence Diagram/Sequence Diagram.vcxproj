@@ -140,16 +140,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Disk.cpp" />
-    <ClCompile Include="DVD_Privod.cpp" />
+    <ClCompile Include="DVD_Drive.cpp" />
     <ClCompile Include="DVD_Reader.cpp" />
-    <ClCompile Include="DVD_Recorder.cpp" />
+    <ClCompile Include="DVD_Writer.cpp" />
     <ClCompile Include="Sequence Diagram.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Disk.h" />
-    <ClInclude Include="DVD_Privod.h" />
+    <ClInclude Include="DVD_Drive.h" />
     <ClInclude Include="DVD_Reader.h" />
-    <ClInclude Include="DVD_Recorder.h" />
+    <ClInclude Include="DVD_Writer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -3,9 +3,9 @@
 #include "Disk.h"
 
 
-class DVD_Reader
+class DVD_Writer
 {
 public:
-	void read(Disk*);
+	void write(Disk*);
 };
 
