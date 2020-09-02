@@ -21,7 +21,15 @@ public:
 	Disk(std::string&);
 	void operator () (std::string&);
 
-	bool empty()   const;
-	bool is_open() const;
+	bool empty()                const;
+	bool is_open()              const;
+
+	std::string get_data()      const;
+	void        set_data(std::string&);
+	
+	unsigned    get_disk_size() const;
+	unsigned    get_hash()      const;
+
+	void clear_data();
 };
 

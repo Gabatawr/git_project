@@ -6,6 +6,5 @@
 class DVD_Writer
 {
 public:
-	void write(Disk*);
+	bool write(Disk*, std::string&, unsigned&);
 };
-

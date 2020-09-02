@@ -21,16 +21,21 @@ int main()
 		disk(virtual_disk_path);
 	}
 
-	char choice; do {
-		std::cout << "\n 1. Read disk data"
+	while (true)
+	{
+		char choice; do {
+		std::cout << "\n"
+				  << "\n 1. Read disk data"
 				  << "\n 2. Write new data"
 				  << "\n 0. Exit"
 				  << "\n _.\b\b";
 		std::cin >> choice;
+			
 		if (choice == '0') return 0;
-	} while (choice != '1' && choice != '2');
-	
-	if (choice == '1') drive.
-	
-
+			
+		} while (choice != '1' && choice != '2');
+		
+		if (choice == '1') drive.read();
+		if (choice == '2') drive.write(data);
+	}
 }

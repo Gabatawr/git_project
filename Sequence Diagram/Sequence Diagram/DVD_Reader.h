@@ -8,4 +8,3 @@ class DVD_Reader
 public:
 	void read(Disk*);
 };
-

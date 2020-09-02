@@ -1,11 +1,14 @@
 #include "DVD_Drive.h"
 
+#include "DVD_Reader.h"
+#include "DVD_Writer.h"
+
 #include <iostream>
 
 
 bool DVD_Drive::open(Disk& disk)
 {
-	if (disk.is_open())
+	if (not disk.is_open())
 	{
 		std::cout << "\n Disk not open";
 		this->disk = nullptr;
@@ -19,16 +22,33 @@ bool DVD_Drive::open(Disk& disk)
 		this->disk = &disk;
 		return true;
 	}
-	
 }
 
-bool DVD_Drive::verification(unsigned)
+void DVD_Drive::read() const
 {
-	
+	DVD_Reader reader;
+	reader.read(disk);
 }
 
-bool DVD_Drive::read()
+bool DVD_Drive::write(std::string& data) const
 {
-	reader = new DVD_Reader;
-	reader->read(disk);
+	DVD_Writer writer;
+	
+	std::hash<std::string> encoder;
+	unsigned hash_one = encoder(data), hash_two;
+	
+	if (not writer.write(disk, data, hash_two))
+	{
+		std::cout << "\n Error writing data to disk";
+		return false;
+	}
+	
+	if (hash_one != hash_two)
+	{
+		std::cout << "\n Data verification error";
+		return false;
+	}
+
+	std::cout << "\n Data written to disk";
+	return true;
 }
