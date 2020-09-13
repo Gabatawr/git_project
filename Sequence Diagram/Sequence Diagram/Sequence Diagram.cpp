@@ -6,19 +6,19 @@
 
 int main()
 {
-	DVD_Drive drive;
+	auto* drive = new DVD_Drive;
 	std::string data = "Data";
 
 	std::string virtual_disk_path = "file.txt";
-	Disk disk(virtual_disk_path);
+	auto* disk = new Disk(virtual_disk_path);
 
-	while (not drive.open(disk))
+	while (not drive->open((*disk)))
 	{
 		std::cout << "\n Enter virtual disk path (or exit) : ";
 		std::cin >> virtual_disk_path;
 
 		if (virtual_disk_path == "exit") return 0;
-		disk(virtual_disk_path);
+		(*disk)(virtual_disk_path);
 	}
 
 	while (true)
@@ -35,7 +35,7 @@ int main()
 			
 		} while (choice != '1' && choice != '2');
 		
-		if (choice == '1') drive.read();
-		if (choice == '2') drive.write(data);
+		if (choice == '1') drive->read();
+		if (choice == '2') drive->write(data);
 	}
 }

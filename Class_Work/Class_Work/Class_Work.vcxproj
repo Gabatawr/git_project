@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8d495bac-d610-4824-b53e-68577e091fa2}</ProjectGuid>
-    <RootNamespace>SequenceDiagram</RootNamespace>
+    <ProjectGuid>{11fc3285-659f-4f4a-80dd-b13be5c0788d}</ProjectGuid>
+    <RootNamespace>ClassWork</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,20 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Disk.cpp" />
-    <ClCompile Include="DVD_Drive.cpp" />
-    <ClCompile Include="DVD_Reader.cpp" />
-    <ClCompile Include="DVD_Writer.cpp" />
-    <ClCompile Include="Sequence Diagram.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Disk.h" />
-    <ClInclude Include="DVD_Drive.h" />
-    <ClInclude Include="DVD_Reader.h" />
-    <ClInclude Include="DVD_Writer.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClCompile Include="Class_Work.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

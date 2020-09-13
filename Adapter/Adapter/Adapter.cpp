@@ -56,5 +56,7 @@ int main()
 	auto* ship = new Ship;
 	auto* ship_adapt = new Ship_to_transport(ship);
 	driver.travel(ship_adapt);
+
+	system("pause");
 }
 

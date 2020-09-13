@@ -1,86 +1,93 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Menu" Collapsed="true">
-    <Position X="8" Y="3" Width="1.5" />
+  <Class Name="Menu">
+    <Position X="12" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAIEQAABACQAgQEABAAAIEAAMAAAgAAAAAgAKEYI=</HashCode>
+      <HashCode>AAgAAIEQAADACQAgQEABAAAIEAAMAAAgAAAAAgAKEYI=</HashCode>
       <FileName>Menu.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Question" Collapsed="true">
-    <Position X="9.75" Y="3" Width="1.5" />
+  <Class Name="Question">
+    <Position X="4.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAACAAAAEAAAAAEQAgBAAAQIAEEAEAAAgoAAiA=</HashCode>
+      <HashCode>AAAAACAACICAAEAAAAAEQAgBAAAQIAEEAEIgAgoAAiA=</HashCode>
       <FileName>Question.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Section" Collapsed="true">
-    <Position X="1" Y="5.75" Width="1.5" />
+  <Class Name="Section">
+    <Position X="1" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAABAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAABAAAICAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Section.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Stat" Collapsed="true">
-    <Position X="3.25" Y="3" Width="1.5" />
+  <Class Name="Stat">
+    <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgEACBAAAAAAAAAQAAAAAAIAABkAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAIAgEACBIAAAAAAAAQAAAAAAIAABkAAAA=</HashCode>
       <FileName>Stat.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Stat_section" Collapsed="true">
+  <Class Name="Stat_section">
     <Position X="1" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Stat_section.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Stat_test" Collapsed="true">
-    <Position X="3.25" Y="4.25" Width="1.5" />
+  <Class Name="Stat_test">
+    <Position X="2.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Stat_test.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Stat_user" Collapsed="true">
-    <Position X="5.5" Y="4.25" Width="1.5" />
+  <Class Name="Stat_user">
+    <Position X="6.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEgAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Stat_user.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Stat_user_test" Collapsed="true">
-    <Position X="11.5" Y="3" Width="1.5" />
+  <Class Name="Stat_user_test">
+    <Position X="8" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABkBAAEAAAAgAAgEAIAACIAAAQAEAEBAAAAQAAAEggA=</HashCode>
+      <HashCode>ABkBAAEAAACgAAgEgIAACIAAAQAEAEBAAAAQAAAEggA=</HashCode>
       <FileName>Stat_user_test.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Test" Collapsed="true">
-    <Position X="3.25" Y="5.75" Width="1.5" />
+  <Class Name="Test">
+    <Position X="2.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAIAAAAAAAAAAAAAAAAAAAQAAAAAAQAACAAEAiA=</HashCode>
+      <HashCode>AAACAAIAAICAAAAAAAAAAAAAAAQAAAAAAQIgCAAEAiA=</HashCode>
       <FileName>Test.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Test_status" Collapsed="true">
-    <Position X="8" Y="4" Width="1.5" />
+  <Class Name="Test_status">
+    <Position X="9.75" Y="7.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Test_status::Status" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Test_status.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAQAICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Test_status.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Tesys" Collapsed="true">
-    <Position X="9.75" Y="4" Width="1.5" />
+  <Class Name="Tesys">
+    <Position X="13.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>oAAAAAAAAACAAgAACgAAAAAAAAAAQAEAAAAAAAAAAAA=</HashCode>
       <FileName>Tesys.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="User" Collapsed="true">
-    <Position X="5.5" Y="5.75" Width="1.5" />
+  <Class Name="User">
+    <Position X="6.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAQQAAAAAEhAEAAAAAAAAAEIAAgBBAAAoAAEKA=</HashCode>
+      <HashCode>AAABgAAQAACAAAEhAEAAAAAACAAEIAAgBBAAAoAAEKA=</HashCode>
       <FileName>User.h</FileName>
     </TypeIdentifier>
   </Class>
