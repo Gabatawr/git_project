@@ -46,8 +46,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd">
+    <Image Include="class_diagram.png">
       <Filter>Файлы ресурсов</Filter>
-    </None>
+    </Image>
+    <Image Include="sequence_diagram.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
   </ItemGroup>
 </Project>

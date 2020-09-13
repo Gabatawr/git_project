@@ -152,7 +152,8 @@
     <ClInclude Include="DVD_Writer.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <Image Include="class_diagram.png" />
+    <Image Include="sequence_diagram.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
