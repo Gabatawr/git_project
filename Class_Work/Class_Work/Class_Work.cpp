@@ -1,73 +1,72 @@
 ﻿#include <iostream>
 
-
-class Template_method
+class ITransport
 {
 public:
-	void build_house(int num_floor = 3)
-	{
-		build_foor();
-		build_floor(num_floor);
-		build_foundation();
-		build_pool();
-	}
-	virtual void build_foor() = 0;
-	virtual void build_floor(int) = 0;
-	virtual void build_foundation() = 0;
-	virtual void build_pool(){};
+	virtual unsigned get_power() = 0;
+	virtual unsigned drive(double) = 0;
+	
+	virtual ~ITransport() = default;
 };
 
-class Hotel_poll : public Template_method
+class Car : public ITransport
 {
+	unsigned power;
+	
 public:
-	void build_foor() override
-	{
-		std::cout << "/=HOTEL=\\\n";
-	}
-	void build_floor(int num_floor) override
-	{
-		for (auto i = 0; i < num_floor; i++)
-		{
-			std::cout << "|=O=O=O=|\n";
-		}
-	}
-	void build_foundation() override
-	{
-		std::cout << "|xx[ ]xx|\n";
-	}
-	void build_pool() override
-	{
-		std::cout << "[~~~~~~~]\n";
-	}
+	Car(unsigned p) : power(p) {}
+	unsigned get_power() override { return power; }
+	unsigned drive(double km) override { return (km / power) * 60; }
 };
 
-class Motel : public Template_method
+
+class IUpdate : public ITransport
 {
+protected:
+	ITransport* car;
+	
 public:
-	void build_foor() override
-	{
-		std::cout << "/=MOTEL=\\\n";
-	}
-	void build_floor(int num_floor) override
-	{
-		for (auto i = 0; i < num_floor; i++)
-		{
-			std::cout << "|=Q=Q=Q=|\n";
-		}
-	}
-	void build_foundation() override
-	{
-		std::cout << "|dd[ ]bb|\n";
-	}
+	IUpdate(ITransport* T) { car = T; }
 };
+
+class Turbo : public IUpdate
+{
+	double multiplier = 1.2;
+	
+public:
+	Turbo(ITransport* T) : IUpdate(T) {}
+	
+	unsigned get_power() override { return car->get_power() * multiplier; }
+	unsigned drive(double km) override { return (km / get_power()) * 60; }
+};
+
+class Nitro : public IUpdate
+{
+	double multiplier = 1.1;
+
+public:
+	Nitro(ITransport* T) : IUpdate(T) {}
+
+	unsigned get_power() override { return car->get_power() * multiplier; }
+	unsigned drive(double km) override { return (km / get_power()) * 60; }
+};
+
+
 
 int main()
 {
-	Hotel_poll house;
-	house.build_house(5);
+	unsigned km = 100;
 
-	std::cout << "\n\n\n";
 	
-	Motel house2;
-	house2.build_house(3);
+	ITransport* car = new Car(100); // default km/h
+	std::cout << "\n " << km << "km for " << car->drive(km) << "min [default]\n";
+	
+	car = new Turbo(car);
+	std::cout << "\n " << km << "km for " << car->drive(km) << "min [+Turbo]\n";
+
+	car = new Nitro(car);
+	std::cout << "\n " << km << "km for " << car->drive(km) << "min [+Turbo, +Nitro]\n";
+
+	
+	std::cout << "\n\n "; system("pause");
 }
