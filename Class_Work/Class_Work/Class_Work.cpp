@@ -24,31 +24,25 @@ class IUpdate : public ITransport
 {
 protected:
 	ITransport* car;
+	double multiplier;
 	
 public:
-	IUpdate(ITransport* T) { car = T; }
+	IUpdate(ITransport* T, double M) : car(T), multiplier(M) {}
+
+	unsigned get_power() override { return car->get_power() * multiplier; }
+	unsigned drive(double km) override { return (km / get_power()) * 60; }
 };
 
 class Turbo : public IUpdate
 {
-	double multiplier = 1.2;
-	
 public:
-	Turbo(ITransport* T) : IUpdate(T) {}
-	
-	unsigned get_power() override { return car->get_power() * multiplier; }
-	unsigned drive(double km) override { return (km / get_power()) * 60; }
+	Turbo(ITransport* T) : IUpdate(T, 1.2) {}
 };
 
 class Nitro : public IUpdate
 {
-	double multiplier = 1.1;
-
 public:
-	Nitro(ITransport* T) : IUpdate(T) {}
-
-	unsigned get_power() override { return car->get_power() * multiplier; }
-	unsigned drive(double km) override { return (km / get_power()) * 60; }
+	Nitro(ITransport* T) : IUpdate(T, 1.1) {}
 };
 
 
@@ -58,10 +52,10 @@ int main()
 	unsigned km = 100;
 
 	
-	ITransport* car = new Car(100); // default km/h
+	ITransport* car = new Car(100); // default power (km/h)
 	std::cout << "\n " << km << "km for " << car->drive(km) << "min [default]\n";
 	
-	car = new Turbo(car);
+	car = new Turbo(car); // car power = power * 1.2
 	std::cout << "\n " << km << "km for " << car->drive(km) << "min [+Turbo]\n";
 
 	car = new Nitro(car);
