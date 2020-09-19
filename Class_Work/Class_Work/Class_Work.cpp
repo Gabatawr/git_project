@@ -20,7 +20,7 @@ public:
 };
 
 
-class IUpdate : public ITransport
+class IUpdate : public ITransport // Decorator
 {
 protected:
 	ITransport* car;
@@ -54,12 +54,15 @@ int main()
 	
 	ITransport* car = new Car(100); // default power (km/h)
 	std::cout << "\n " << km << "km for " << car->drive(km) << "min [default]\n";
+	// 100km for 60min [default]
 	
 	car = new Turbo(car); // car power = power * 1.2
 	std::cout << "\n " << km << "km for " << car->drive(km) << "min [+Turbo]\n";
+	// 100km for 50min [+Turbo]
 
 	car = new Nitro(car);
 	std::cout << "\n " << km << "km for " << car->drive(km) << "min [+Turbo, +Nitro]\n";
+	// 100km for 45min [+Turbo, +Nitro]
 
 	
 	std::cout << "\n\n "; system("pause");
