@@ -21,22 +21,22 @@ private://----------------------------------------------------------------------
                                int priority, DateTime* dateTime,
                                int id = 0, bool done = false);
 public://-------------------------------------------------------------------------------
-    static      Task* GetTask (std::string text, std::string tag,
+    static Task* GetTask      (std::string text, std::string tag,
                                std::string priority, std::string date, std::string time,
                                std::string  id = "", std::string  done = "");
 
-    static int  GetIDCounter  ();
-    static void SetIDCounter  (int);
-           int  GetID         () const;
+    static int   GetIDCounter  ();
+    static void  SetIDCounter  (int);
+           int   GetID         () const;
 	
-           void Print         () const;
+           void  Print         () const;
 	       
-           void Edit          ();
-           void Done          ();
+           void  Edit          ();
+           void  Done          ();
 
-           void Save          () override;
-           void Load          () override;
+           void  Save          () override;
+           void  Load          () override;
 
-               ~Task          () override;
+                ~Task          () override;
 };//------------------------------------------------------------------------------------
 
