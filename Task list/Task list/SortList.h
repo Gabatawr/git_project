@@ -6,11 +6,11 @@
 class SortList
 {
 protected://---------------------------------------
-	std::multimap<std::string, Task*> _storageList;
+    std::multimap<std::string, Task*> _storageList;
 public://------------------------------------------
-	void Print       ();
-	bool Filter(std::string key);
+    void Print       ();
+    bool Filter      (std::string key);
 	
-	void Add         (std::string, Task*);
-	void Del         (int id);
+    void Add         (std::string, Task*);
+    void Del         (int id);
 };//-----------------------------------------------
