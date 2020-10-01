@@ -120,6 +120,8 @@ void Task::Edit()
 
 void Task::Done() { _done = true; }
 
+bool Task::GetDone() { return _done; }
+
 // -------------------------------------------------------
 
 void Task::Save()

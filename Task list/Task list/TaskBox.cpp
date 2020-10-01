@@ -122,6 +122,21 @@ void TaskBox::Done(int id)
 	}
 }
 
+bool TaskBox::Completed()
+{
+	bool findSomething = false;
+	for (auto& it : _taskList)
+	{
+		if (it->GetDone())
+		{
+			it->Print();
+			findSomething = true;
+		}
+	}
+	if (findSomething) std::cout << "\n\n";
+	return findSomething;
+}
+
 // -------------------------------------------------------
 
 void TaskBox::Save()

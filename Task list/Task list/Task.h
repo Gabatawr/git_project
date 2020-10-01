@@ -33,6 +33,7 @@ public://-----------------------------------------------------------------------
 	       
            void  Edit          ();
            void  Done          ();
+           bool  GetDone       ();
 
            void  Save          () override;
            void  Load          () override;

@@ -40,7 +40,8 @@ void Menu::Help()
 		<< "\n          .: del  #ID"
 		<< "\n          .: done #ID"
 		<< "\n          .: edit #ID"
-		<< "\n          .: filter 'what' -key"
+		<< "\n          .: completed"
+		<< "\n          .: filter '...' -key"
 		<< "\n          .: sort by -key"
 		<< "\n          .: save"
 		<< "\n          .: exit"
@@ -82,15 +83,16 @@ void Menu::Run()
 		for (auto& ch : command) if (ch >= 65 && ch <= 90) ch += 32; // lowercase
 		
 		system("cls");
-		if      (FindStr(command, "help"))   { Help(); }
-		else if (FindStr(command, "add"))    { _taskBox->Add(); }
-		else if (FindStr(command, "del"))    { _taskBox->Del(StrToInt(command)); }
-		else if (FindStr(command, "done"))   { _taskBox->Done(StrToInt(command)); }
-		else if (FindStr(command, "edit"))   { _taskBox->Edit(StrToInt(command)); }
-		else if (FindStr(command, "filter")) { trySearch = _taskBox->Filter(PreFilter(command), command); }
-		else if (FindStr(command, "sort"))   { SetPrintMode(command); }
-		else if (FindStr(command, "save"))   { _taskBox->Save(); }
-		else if (FindStr(command, "exit"))   { if (Exit()) break; }
+		if      (FindStr(command, "help"))      { Help(); }
+		else if (FindStr(command, "add"))       { _taskBox->Add(); }
+		else if (FindStr(command, "del"))       { _taskBox->Del(StrToInt(command)); }
+		else if (FindStr(command, "done"))      { _taskBox->Done(StrToInt(command)); }
+		else if (FindStr(command, "edit"))      { _taskBox->Edit(StrToInt(command)); }
+		else if (FindStr(command, "completed")) { trySearch = _taskBox->Completed(); }
+		else if (FindStr(command, "filter"))    { trySearch = _taskBox->Filter(PreFilter(command), command); }
+		else if (FindStr(command, "sort"))      { SetPrintMode(command); }
+		else if (FindStr(command, "save"))      { _taskBox->Save(); }
+		else if (FindStr(command, "exit"))      { if (Exit()) break; }
 		else 
 		{
 			std::cout << "\n Opps, enter 'help' to look commands\n ";
